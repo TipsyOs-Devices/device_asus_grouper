@@ -41,3 +41,15 @@ include device/asus/grouper/BoardConfigCommon.mk
 TARGET_RECOVERY_FSTAB = device/asus/grouper/fstab.grouper
 
 MALLOC_IMPL := dlmalloc
+
+# ROM toolchain
+TARGET_GCC_VERSION_EXP := 4.8-sm
+
+# Custom Kernel Toolchain
+KERNEL_TOOLCHAIN_PREFIX := arm-eabi-
+KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-eabi-4.9-sm/bin
+
+# Graphite optimizations
+SYMMETRY := true
+GRAPHITE_OPTS := true
+STRICT_ALIASING := true
