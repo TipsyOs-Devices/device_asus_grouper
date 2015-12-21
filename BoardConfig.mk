@@ -35,6 +35,20 @@ BOARD_HAL_STATIC_LIBRARIES := libdumpstate.grouper
 
 TARGET_RELEASETOOLS_EXTENSIONS := device/asus/grouper
 
+# ROM toolchain
+TARGET_GCC_VERSION_EXP := 4.9-uber
+
+# Custom Kernel Toolchain
+KERNEL_TOOLCHAIN_PREFIX := arm-eabi-
+KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-eabi-4.9-uber/bin
+
+# Optimizations
+CLANG_O3 := true
+STRICT_ALIASING := false
+KRAIT_TUNINGS := true
+GRAPHITE_OPTS := false
+ENABLE_GCCONLY := true
+
 -include vendor/asus/grouper/BoardConfigVendor.mk
 include device/asus/grouper/BoardConfigCommon.mk
 
