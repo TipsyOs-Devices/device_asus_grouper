@@ -44,9 +44,9 @@ KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-ea
 
 # Optimizations
 CLANG_O3 := true
-STRICT_ALIASING := false
-KRAIT_TUNINGS := true
-GRAPHITE_OPTS := false
+STRICT_ALIASING := true 
+KRAIT_TUNINGS := false
+GRAPHITE_OPTS := true
 ENABLE_GCCONLY := true
 
 -include vendor/asus/grouper/BoardConfigVendor.mk
